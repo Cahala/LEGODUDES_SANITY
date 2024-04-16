@@ -43,16 +43,8 @@ header {
     padding: 2rem 1rem;
     position: relative;
 }
-
-header a {
-    width: 100%;
-    max-width: 15rem;
-}
-
-#logo { 
-    max-width: 15rem; 
-    width: 100%; 
-}
+header a {width: 100%; max-width: 15rem; }
+#logo { width: 100%; max-width: 15rem; }
 
 header button {
     min-width: 3rem;
@@ -224,31 +216,41 @@ main article.productCard button {
 /* PRODUKTSIDE */
 #productpage {
     display: flex;
+    flex-wrap: nowrap;
     gap: 1rem;
 }
-
 #productpage h2 {
     text-align: left;
 }
-
-#productpage img {
+#productpage figure {
     max-width: 60%;
 }
-
+#productpage a {
+    color: var(--yellow);
+    background: var(--black);
+    padding: .5rem;
+    transition: ease-in-out .5s;
+    border-bottom: 5px solid var(--black);
+    text-decoration: none;
+}
+#productpage a:hover {
+    background: var(--green);
+    border-bottom: 5px solid var(--black);
+}
+#productpage img {
+    width: 100%;
+    border: 5px solid var(--black);
+}
 .priceview {
     font-size: 2rem;
-    color: var(--green);  
+    color: var(--green);
 }
-
 #productpage article {
     flex-grow: 1;
+    padding-top: 2rem;
 }
-
-#productpage.metainfo {
-   display: flex;
-   justify-content: space-between;
-}
-
-#productpage h2 {
-    text-align: left;
+#productpage .metainfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
